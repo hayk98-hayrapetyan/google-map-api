@@ -56,8 +56,8 @@ class PlaceFinder {
     navigator.geolocation.getCurrentPosition(
       async successResult => {
         const coordinates = {
-          lat: successResult.coords.latitude + Math.random() * 50,
-          lng: successResult.coords.longitude + Math.random() * 50
+          lat: successResult.coords.latitude,
+          lng: successResult.coords.longitude
         };
         const address = await getAddressFromCoords(coordinates);
         modal.hide();
